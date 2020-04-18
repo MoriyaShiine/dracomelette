@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-	"layer0": "dracomelette:items/dracomelette"
+	"layer0": "dracomelette:item/dracomelette"
   }
 }
