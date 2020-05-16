@@ -3,7 +3,6 @@ package moriyashiine.dracomelette;
 import net.minecraftforge.common.ForgeConfigSpec;
 import org.apache.commons.lang3.tuple.Pair;
 
-/** File created by mason on 4/18/20 **/
 public class DCConfig {
 	public static final DCConfig INSTANCE;
 	static final ForgeConfigSpec SPEC;
