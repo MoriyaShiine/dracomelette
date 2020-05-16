@@ -23,7 +23,6 @@ import net.minecraftforge.fml.common.Mod;
 import javax.annotation.Nonnull;
 import java.util.Random;
 
-/** File created by mason on 4/18/20 **/
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DCObjects {
 	public static final Item dracomelette = new Item(new Item.Properties().group(ItemGroup.FOOD).food(new Food.Builder().hunger(20).saturation(1).effect(new EffectInstance(Effects.ABSORPTION, 1800, 3), 1).effect(new EffectInstance(Effects.REGENERATION, 1800, 3), 1).effect(new EffectInstance(Effects.RESISTANCE, 1800, 2), 1).build())) {
