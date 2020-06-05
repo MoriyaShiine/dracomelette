@@ -1,21 +1,16 @@
 package moriyashiine.dracomelette.common.registry;
 
 import moriyashiine.dracomelette.DCConfig;
-import net.minecraft.block.*;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.SoundEvents;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.server.ServerWorld;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -44,23 +39,6 @@ public class DCObjects {
 			return super.onItemUseFinish(stack, world, livingEntity);
 		}
 	}.setRegistryName("dracomelette");
-	
-	@SubscribeEvent
-	public static void registerBlocks(RegistryEvent.Register<Block> event) {
-		event.getRegistry().register(new DragonEggBlock(Block.Properties.from(Blocks.DRAGON_EGG).tickRandomly()) {
-			@Override
-			public void randomTick(@Nonnull BlockState state, @Nonnull ServerWorld world, @Nonnull BlockPos pos, @Nonnull Random random) {
-				super.randomTick(state, world, pos, random);
-				if (!world.isRemote && world.getBlockState(pos.down()).getBlock() instanceof MagmaBlock) {
-					world.playSound(null, pos.down(), SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1, 1);
-					if (random.nextFloat() < DCConfig.INSTANCE.breakChance.get()) {
-						world.setBlockState(pos, Blocks.AIR.getDefaultState());
-					}
-					InventoryHelper.spawnItemStack(world, pos.getX(), pos.getY() + 1.8, pos.getZ(), new ItemStack(dracomelette));
-				}
-			}
-		}.setRegistryName(new ResourceLocation("minecraft", "dragon_egg")));
-	}
 	
 	@SubscribeEvent
 	public static void registerItems(RegistryEvent.Register<Item> event) {

@@ -1,24 +1,27 @@
 buildscript {
     repositories {
         maven { url = "https://files.minecraftforge.net/maven/" }
+        maven { url = "https://dist.creeper.host/Sponge/maven" }
         jcenter()
         mavenCentral()
     }
     dependencies {
         classpath group: "net.minecraftforge.gradle", name: "ForgeGradle", version: "3.+", changing: true
+        classpath "org.spongepowered:mixingradle:0.7-SNAPSHOT"
     }
 }
 apply plugin: "net.minecraftforge.gradle"
 apply plugin: "eclipse"
+apply plugin: "org.spongepowered.mixin"
 
-version = "1.0"
+version = "1.0.1"
 group = "moriyashiine.dracomelette"
 archivesBaseName = "dracomelette"
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = "1.8"
 
 minecraft {
-    mappings channel: "snapshot", version: "20200418-1.15.1"
+    mappings channel: "snapshot", version: "20200601-1.15.1"
     runs {
         client {
             workingDirectory project.file("run")
@@ -41,20 +44,33 @@ minecraft {
     }
 }
 
+mixin {
+    add sourceSets.main, "dracomelette.refmap.json"
+}
+
+repositories {
+    maven {
+        name "mixins"
+        url "https://dist.creeper.host/Sponge/maven"
+    }
+}
+
 dependencies {
-    minecraft "net.minecraftforge:forge:1.15.2-31.1.0"
+    minecraft "net.minecraftforge:forge:1.15.2-31.2.0"
+    compile 'org.spongepowered:mixin:0.8.1-SNAPSHOT'
 }
 
 jar {
     manifest {
         attributes([
-            "Specification-Title": "dracomelette",
-            "Specification-Vendor": "moriyashiine",
-            "Specification-Version": "1",
-            "Implementation-Title": project.name,
-            "Implementation-Version": "${version}",
-            "Implementation-Vendor" :"moriyashiine",
-            "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Specification-Title": "dracomelette",
+                "Specification-Vendor": "moriyashiine",
+                "Specification-Version": "1",
+                "Implementation-Title": project.name,
+                "Implementation-Version": "${version}",
+                "Implementation-Vendor" :"moriyashiine",
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "MixinConnector" : "moriyashiine.dracomelette.mixin.connector.DCMixinConnector"
         ])
     }
 }
