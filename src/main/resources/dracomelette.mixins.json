@@ -1,13 +1,12 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "compatibilityLevel": "JAVA_8",
   "package": "moriyashiine.dracomelette.mixin",
-  "refmap": "dracomelette.refmap.json",
+  "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "ModifyMagmaBlock"
+	"ModifyMagmaBlock"
   ],
   "injectors": {
-    "defaultRequire": 1
+	"defaultRequire": 1
   }
 }
