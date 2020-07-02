@@ -7,9 +7,12 @@ import io.github.cottonmc.cotton.config.annotations.ConfigFile;
 public class DCConfig {
 	public static final DCConfig INSTANCE = new DCConfig();
 	
-	@Comment(value = "The chance a given Dragon Egg will break when producing a Dracomelette")
+	@Comment("The chance a given Dragon Egg will break when producing a Dracomelette")
 	public float breakChance = 1 / 3f;
 	
-	@Comment(value = "The chance to teleport when eating a Dracomelette")
+	@Comment("The chance to teleport when eating a Dracomelette")
 	public float teleportChance = 0.5f;
+	
+	@Comment("Should the Ender Dragon spawn eggs after the initial kill")
+	public boolean spawnMultipleEggs = false;
 }
