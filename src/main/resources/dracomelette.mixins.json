@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "moriyashiine.dracomelette.mixin",
+  "package": "moriyashiine.dracomelette.common.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
 	"ModifyMagmaBlock",

@@ -1,7 +1,7 @@
-package moriyashiine.dracomelette.mixin;
+package moriyashiine.dracomelette.common.mixin;
 
-import moriyashiine.dracomelette.DCConfig;
-import moriyashiine.dracomelette.Dracomelette;
+import moriyashiine.dracomelette.common.DCConfig;
+import moriyashiine.dracomelette.common.Dracomelette;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DragonEggBlock;
 import net.minecraft.block.MagmaBlock;
@@ -27,7 +27,7 @@ public class ModifyMagmaBlock {
 			if (random.nextFloat() < DCConfig.INSTANCE.breakChance) {
 				world.breakBlock(pos.up(), false);
 			}
-			world.spawnEntity(new ItemEntity(world, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5, new ItemStack(Dracomelette.dracomelette)));
+			world.spawnEntity(new ItemEntity(world, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5, new ItemStack(Dracomelette.DRACOMELETTE)));
 		}
 	}
 }

@@ -1,6 +1,6 @@
-package moriyashiine.dracomelette.item;
+package moriyashiine.dracomelette.common.item;
 
-import moriyashiine.dracomelette.DCConfig;
+import moriyashiine.dracomelette.common.DCConfig;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ChorusFruitItem;
 import net.minecraft.item.ItemStack;

@@ -1,4 +1,4 @@
-package moriyashiine.dracomelette;
+package moriyashiine.dracomelette.common;
 
 import blue.endless.jankson.Comment;
 import io.github.cottonmc.cotton.config.annotations.ConfigFile;

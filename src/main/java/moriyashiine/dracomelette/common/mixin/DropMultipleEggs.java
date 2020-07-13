@@ -1,6 +1,6 @@
-package moriyashiine.dracomelette.mixin;
+package moriyashiine.dracomelette.common.mixin;
 
-import moriyashiine.dracomelette.DCConfig;
+import moriyashiine.dracomelette.common.DCConfig;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonFight;
 import org.spongepowered.asm.mixin.Mixin;
