@@ -1,6 +1,6 @@
 package moriyashiine.dracomelette.common.item;
 
-import moriyashiine.dracomelette.common.DCConfig;
+import moriyashiine.dracomelette.common.Dracomelette;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ChorusFruitItem;
 import net.minecraft.item.ItemStack;
@@ -14,6 +14,6 @@ public class DracomeletteItem extends ChorusFruitItem {
 	
 	@Override
 	public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-		return world.random.nextFloat() < DCConfig.INSTANCE.teleportChance ? super.finishUsing(stack, world, user) : Items.COOKED_PORKCHOP.finishUsing(stack, world, user);
+		return world.random.nextFloat() < Dracomelette.CONFIG.teleportChance ? super.finishUsing(stack, world, user) : Items.COOKED_PORKCHOP.finishUsing(stack, world, user);
 	}
 }

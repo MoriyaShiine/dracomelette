@@ -15,6 +15,8 @@ import net.minecraft.util.registry.Registry;
 public class Dracomelette implements ModInitializer {
 	public static final String MODID = "dracomelette";
 	
+	public static final DCConfig CONFIG = new DCConfig();
+	
 	public static final Item DRACOMELETTE = new DracomeletteItem(new Item.Settings().group(ItemGroup.FOOD).rarity(Rarity.EPIC).food(new FoodComponent.Builder().hunger(20).saturationModifier(1).statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 1800, 3), 1).statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 1800, 2), 1).statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 1800, 3), 1).build()));
 	
 	@Override

@@ -1,11 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "moriyashiine.dracomelette.common.mixin",
+  "package": "moriyashiine.dracomelette.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-	"ModifyMagmaBlock",
-	"DropMultipleEggs"
+	"DropMultipleEggs",
+	"ModifyMagmaBlock"
   ],
   "injectors": {
 	"defaultRequire": 1

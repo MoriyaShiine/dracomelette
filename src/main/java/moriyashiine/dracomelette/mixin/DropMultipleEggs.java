@@ -1,6 +1,6 @@
-package moriyashiine.dracomelette.common.mixin;
+package moriyashiine.dracomelette.mixin;
 
-import moriyashiine.dracomelette.common.DCConfig;
+import moriyashiine.dracomelette.common.Dracomelette;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonFight;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,13 +11,12 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(EnderDragonFight.class)
 public class DropMultipleEggs {
-	@SuppressWarnings("FieldCanBeLocal")
 	@Shadow
 	private boolean previouslyKilled;
 	
 	@Inject(method = "dragonKilled", at = @At("HEAD"))
 	private void dragonKilled(EnderDragonEntity dragon, CallbackInfo info) {
-		if (DCConfig.INSTANCE.spawnMultipleEggs) {
+		if (Dracomelette.CONFIG.spawnMultipleEggs) {
 			previouslyKilled = false;
 		}
 	}
