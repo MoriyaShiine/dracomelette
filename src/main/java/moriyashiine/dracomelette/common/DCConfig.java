@@ -1,16 +1,13 @@
 package moriyashiine.dracomelette.common;
 
-import blue.endless.jankson.Comment;
-import io.github.cottonmc.cotton.config.annotations.ConfigFile;
+import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
+import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
 
-@ConfigFile(name = Dracomelette.MODID)
-public class DCConfig {
-	@Comment("The chance a given Dragon Egg will break when producing a Dracomelette")
+@Config(name = Dracomelette.MODID)
+public class DCConfig implements ConfigData {
 	public float breakChance = 1 / 3f;
 	
-	@Comment("The chance to teleport when eating a Dracomelette")
 	public float teleportChance = 0.5f;
 	
-	@Comment("Should the Ender Dragon spawn eggs after the initial kill")
 	public boolean spawnMultipleEggs = false;
 }
