@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(EnderDragonFight.class)
-public class DropMultipleEggs {
+public class EnderDragonFightMixin {
 	@Shadow
 	private boolean previouslyKilled;
 	

@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.Random;
 
 @Mixin(MagmaBlock.class)
-public class ModifyMagmaBlock {
+public class MagmaBlockMixin {
 	@Inject(method = "randomTick", at = @At("HEAD"))
 	private void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo info) {
 		if (!world.isClient && world.getBlockState(pos.up()).getBlock() instanceof DragonEggBlock) {
