@@ -16,7 +16,7 @@ public class EnderDragonFightMixin {
 	
 	@Inject(method = "dragonKilled", at = @At("HEAD"))
 	private void dragonKilled(EnderDragonEntity dragon, CallbackInfo info) {
-		if (Dracomelette.CONFIG.spawnMultipleEggs) {
+		if (Dracomelette.config.spawnMultipleEggs) {
 			previouslyKilled = false;
 		}
 	}

@@ -14,6 +14,6 @@ public class DracomeletteItem extends ChorusFruitItem {
 	
 	@Override
 	public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-		return world.random.nextFloat() < Dracomelette.CONFIG.teleportChance ? super.finishUsing(stack, world, user) : Items.COOKED_PORKCHOP.finishUsing(stack, world, user);
+		return world.random.nextFloat() < Dracomelette.config.teleportChance ? super.finishUsing(stack, world, user) : Items.COOKED_PORKCHOP.finishUsing(stack, world, user);
 	}
 }

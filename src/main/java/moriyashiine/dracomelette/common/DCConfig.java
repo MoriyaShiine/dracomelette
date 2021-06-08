@@ -1,11 +1,11 @@
 package moriyashiine.dracomelette.common;
 
-import me.sargunvohra.mcmods.autoconfig1u.ConfigData;
-import me.sargunvohra.mcmods.autoconfig1u.annotation.Config;
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
 
 @Config(name = Dracomelette.MODID)
 public class DCConfig implements ConfigData {
-	public float breakChance = 1 / 3f;
+	public float breakChance = 1 / 4f;
 	
 	public float teleportChance = 0.5f;
 	

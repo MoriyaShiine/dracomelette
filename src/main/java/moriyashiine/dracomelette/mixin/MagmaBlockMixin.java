@@ -23,7 +23,7 @@ public class MagmaBlockMixin {
 	private void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo info) {
 		if (!world.isClient && world.getBlockState(pos.up()).getBlock() instanceof DragonEggBlock) {
 			world.playSound(null, pos.up(), SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1, 1);
-			if (random.nextFloat() < Dracomelette.CONFIG.breakChance) {
+			if (random.nextFloat() < Dracomelette.config.breakChance) {
 				world.breakBlock(pos.up(), false);
 			}
 			world.spawnEntity(new ItemEntity(world, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5, new ItemStack(Dracomelette.DRACOMELETTE)));
