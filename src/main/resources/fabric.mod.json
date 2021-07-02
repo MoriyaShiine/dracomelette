@@ -12,7 +12,7 @@
 	"homepage": "https://www.curseforge.com/minecraft/mc-mods/dracomelette",
 	"sources": "https://github.com/MoriyaShiine/dracomelette"
   },
-  "license": "GPL-3.0",
+  "license": "CC BY-NC-ND 4.0",
   "icon": "assets/dracomelette/icon.png",
   "environment": "*",
   "entrypoints": {
