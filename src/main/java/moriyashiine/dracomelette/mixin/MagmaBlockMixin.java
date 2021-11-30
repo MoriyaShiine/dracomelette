@@ -1,14 +1,15 @@
 package moriyashiine.dracomelette.mixin;
 
 import moriyashiine.dracomelette.common.Dracomelette;
+import moriyashiine.dracomelette.common.registry.ModItems;
+import moriyashiine.dracomelette.common.registry.ModSoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.DragonEggBlock;
 import net.minecraft.block.MagmaBlock;
-import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.math.BlockPos;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -20,13 +21,13 @@ import java.util.Random;
 @Mixin(MagmaBlock.class)
 public class MagmaBlockMixin {
 	@Inject(method = "randomTick", at = @At("HEAD"))
-	private void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo info) {
+	private void cookDragonEgg(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo ci) {
 		if (!world.isClient && world.getBlockState(pos.up()).getBlock() instanceof DragonEggBlock) {
-			world.playSound(null, pos.up(), SoundEvents.BLOCK_FURNACE_FIRE_CRACKLE, SoundCategory.BLOCKS, 1, 1);
+			world.playSound(null, pos.up(), ModSoundEvents.BLOCK_DRAGON_EGG_COOK, SoundCategory.BLOCKS, 1, 1);
+			ItemScatterer.spawn(world, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5, new ItemStack(ModItems.DRACOMELETTE));
 			if (random.nextFloat() < Dracomelette.config.breakChance) {
 				world.breakBlock(pos.up(), false);
 			}
-			world.spawnEntity(new ItemEntity(world, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5, new ItemStack(Dracomelette.DRACOMELETTE)));
 		}
 	}
 }

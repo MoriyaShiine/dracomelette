@@ -10,7 +10,8 @@
   ],
   "contact": {
 	"homepage": "https://www.curseforge.com/minecraft/mc-mods/dracomelette",
-	"sources": "https://github.com/MoriyaShiine/dracomelette"
+	"sources": "https://github.com/MoriyaShiine/dracomelette",
+	"issues": "https://github.com/MoriyaShiine/dracomelette/issues"
   },
   "license": "CC BY-NC-ND 4.0",
   "icon": "assets/dracomelette/icon.png",
@@ -24,9 +25,10 @@
 	"dracomelette.mixins.json"
   ],
   "depends": {
-	"fabricloader": "*",
-	"fabric": "*",
-	"minecraft": "1.17.*",
-	"cloth-config2": "*"
+	"fabricloader": ">=0.12.6",
+	"fabric": ">=0.43.1",
+	"minecraft": "1.18.x",
+	"java": ">=17",
+	"cloth-config2": ">=6.0.42"
   }
 }
