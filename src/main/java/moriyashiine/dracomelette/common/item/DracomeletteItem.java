@@ -11,7 +11,7 @@ public class DracomeletteItem extends Item {
 	public DracomeletteItem(Settings settings) {
 		super(settings);
 	}
-	
+
 	@Override
 	public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
 		if (world.random.nextFloat() < Dracomelette.config.teleportChance) {

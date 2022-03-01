@@ -11,7 +11,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModItems {
 	public static final Item DRACOMELETTE = new DracomeletteItem(new FabricItemSettings().group(ItemGroup.FOOD).rarity(Rarity.EPIC).food(ModFoodComponents.DRACOMELETTE));
-	
+
 	public static void init() {
 		Registry.register(Registry.ITEM, new Identifier(Dracomelette.MOD_ID, "dracomelette"), DRACOMELETTE);
 	}

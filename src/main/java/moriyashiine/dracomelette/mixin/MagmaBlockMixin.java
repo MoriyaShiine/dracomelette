@@ -21,7 +21,7 @@ import java.util.Random;
 @Mixin(MagmaBlock.class)
 public class MagmaBlockMixin {
 	@Inject(method = "randomTick", at = @At("HEAD"))
-	private void cookDragonEgg(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo ci) {
+	private void dracomelette$cookDragonEgg(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo ci) {
 		if (!world.isClient && world.getBlockState(pos.up()).getBlock() instanceof DragonEggBlock) {
 			world.playSound(null, pos.up(), ModSoundEvents.BLOCK_DRAGON_EGG_COOK, SoundCategory.BLOCKS, 1, 1);
 			ItemScatterer.spawn(world, pos.getX() + 0.5, pos.getY() + 1.5, pos.getZ() + 0.5, new ItemStack(ModItems.DRACOMELETTE));

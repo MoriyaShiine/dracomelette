@@ -13,9 +13,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class EnderDragonFightMixin {
 	@Shadow
 	private boolean previouslyKilled;
-	
+
 	@Inject(method = "dragonKilled", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/boss/dragon/EnderDragonFight;generateNewEndGateway()V"))
-	private void respawnDragonEgg(EnderDragonEntity dragon, CallbackInfo ci) {
+	private void dracomelette$respawnDragonEgg(EnderDragonEntity dragon, CallbackInfo ci) {
 		if (Dracomelette.config.spawnMultipleEggs) {
 			previouslyKilled = false;
 		}
