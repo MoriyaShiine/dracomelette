@@ -1,6 +1,10 @@
+/*
+ * All Rights Reserved (c) 2022 MoriyaShiine
+ */
+
 package moriyashiine.dracomelette.common.item;
 
-import moriyashiine.dracomelette.common.Dracomelette;
+import moriyashiine.dracomelette.common.ModConfig;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -14,7 +18,7 @@ public class DracomeletteItem extends Item {
 
 	@Override
 	public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-		if (world.random.nextFloat() < Dracomelette.config.teleportChance) {
+		if (world.random.nextFloat() < ModConfig.teleportChance) {
 			return Items.CHORUS_FRUIT.finishUsing(stack, world, user);
 		}
 		return super.finishUsing(stack, world, user);

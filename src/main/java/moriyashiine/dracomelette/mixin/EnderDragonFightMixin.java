@@ -1,6 +1,10 @@
+/*
+ * All Rights Reserved (c) 2022 MoriyaShiine
+ */
+
 package moriyashiine.dracomelette.mixin;
 
-import moriyashiine.dracomelette.common.Dracomelette;
+import moriyashiine.dracomelette.common.ModConfig;
 import net.minecraft.entity.boss.dragon.EnderDragonEntity;
 import net.minecraft.entity.boss.dragon.EnderDragonFight;
 import org.spongepowered.asm.mixin.Mixin;
@@ -16,7 +20,7 @@ public class EnderDragonFightMixin {
 
 	@Inject(method = "dragonKilled", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/boss/dragon/EnderDragonFight;generateNewEndGateway()V"))
 	private void dracomelette$respawnDragonEgg(EnderDragonEntity dragon, CallbackInfo ci) {
-		if (Dracomelette.config.spawnMultipleEggs) {
+		if (ModConfig.spawnMultipleEggs) {
 			previouslyKilled = false;
 		}
 	}

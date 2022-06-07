@@ -1,13 +1,17 @@
+/*
+ * All Rights Reserved (c) 2022 MoriyaShiine
+ */
+
 package moriyashiine.dracomelette.common;
 
-import me.shedaniel.autoconfig.ConfigData;
-import me.shedaniel.autoconfig.annotation.Config;
+import eu.midnightdust.lib.config.MidnightConfig;
 
-@Config(name = Dracomelette.MOD_ID)
-public class ModConfig implements ConfigData {
-	public float breakChance = 1 / 4F;
+public class ModConfig extends MidnightConfig {
+	@Entry
+	public static boolean spawnMultipleEggs = false;
 
-	public float teleportChance = 0.5F;
-
-	public boolean spawnMultipleEggs = false;
+	@Entry(min = 0, max = 1)
+	public static float breakChance = 0.25F;
+	@Entry(min = 0, max = 1)
+	public static float teleportChance = 0.5F;
 }

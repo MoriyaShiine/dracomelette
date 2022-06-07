@@ -1,3 +1,7 @@
+/*
+ * All Rights Reserved (c) 2022 MoriyaShiine
+ */
+
 package moriyashiine.dracomelette.common.registry;
 
 import moriyashiine.dracomelette.common.Dracomelette;

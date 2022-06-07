@@ -1,4 +1,8 @@
 {
   "item.dracomelette.dracomelette": "Dracomelette",
-  "subtitles.dracomelette.block.dragon_egg.cook": "Dragon Egg cooks"
+  "subtitles.dracomelette.block.dragon_egg.cook": "Dragon Egg cooks",
+  "dracomelette.midnightconfig.title": "Dracomelette",
+  "dracomelette.midnightconfig.spawnMultipleEggs": "Spawn Multiple Eggs",
+  "dracomelette.midnightconfig.breakChance": "Break Chance",
+  "dracomelette.midnightconfig.teleportChance": "Teleport Chance"
 }
