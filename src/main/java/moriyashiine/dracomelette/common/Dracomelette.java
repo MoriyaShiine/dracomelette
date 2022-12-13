@@ -8,6 +8,7 @@ import eu.midnightdust.lib.config.MidnightConfig;
 import moriyashiine.dracomelette.common.registry.ModItems;
 import moriyashiine.dracomelette.common.registry.ModSoundEvents;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.util.Identifier;
 
 public class Dracomelette implements ModInitializer {
 	public static final String MOD_ID = "dracomelette";
@@ -17,5 +18,9 @@ public class Dracomelette implements ModInitializer {
 		MidnightConfig.init(MOD_ID, ModConfig.class);
 		ModItems.init();
 		ModSoundEvents.init();
+	}
+
+	public static Identifier id(String value) {
+		return new Identifier(MOD_ID, value);
 	}
 }
