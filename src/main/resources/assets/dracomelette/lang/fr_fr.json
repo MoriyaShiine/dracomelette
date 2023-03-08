@@ -1,0 +1,10 @@
+{
+  "item.dracomelette.dracomelette": "Dracomelette",
+  "advancements.dracomelette.end.dracomelette.title": "Overcooked",
+  "advancements.dracomelette.end.dracomelette.description": "Placez l'oeuf de dragon sur un bloc de magma et attendez",
+  "subtitles.dracomelette.block.dragon_egg.cook": "Cuisiniers d'oeufs de dragon",
+  "dracomelette.midnightconfig.title": "Dracomelette",
+  "dracomelette.midnightconfig.spawnMultipleEggs": "Faire apparaître plusieurs oeufs",
+  "dracomelette.midnightconfig.breakChance": "Chance de casser",
+  "dracomelette.midnightconfig.teleportChance": "Chance de téléportation"
+}
