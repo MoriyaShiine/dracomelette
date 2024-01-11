@@ -5,8 +5,8 @@
 package moriyashiine.dracomelette.mixin;
 
 import moriyashiine.dracomelette.common.ModConfig;
-import moriyashiine.dracomelette.common.registry.ModItems;
-import moriyashiine.dracomelette.common.registry.ModSoundEvents;
+import moriyashiine.dracomelette.common.init.ModItems;
+import moriyashiine.dracomelette.common.init.ModSoundEvents;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.MagmaBlock;

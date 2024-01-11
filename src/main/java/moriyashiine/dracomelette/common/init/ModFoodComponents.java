@@ -2,7 +2,7 @@
  * All Rights Reserved (c) MoriyaShiine
  */
 
-package moriyashiine.dracomelette.common.registry;
+package moriyashiine.dracomelette.common.init;
 
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;

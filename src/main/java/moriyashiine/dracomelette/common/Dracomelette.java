@@ -5,8 +5,8 @@
 package moriyashiine.dracomelette.common;
 
 import eu.midnightdust.lib.config.MidnightConfig;
-import moriyashiine.dracomelette.common.registry.ModItems;
-import moriyashiine.dracomelette.common.registry.ModSoundEvents;
+import moriyashiine.dracomelette.common.init.ModItems;
+import moriyashiine.dracomelette.common.init.ModSoundEvents;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 
