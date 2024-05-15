@@ -1,7 +1,7 @@
 {
   "required": true,
   "package": "moriyashiine.dracomelette.mixin",
-  "compatibilityLevel": "JAVA_17",
+  "compatibilityLevel": "JAVA_21",
   "mixins": [
 	"EnderDragonFightMixin",
 	"MagmaBlockMixin"

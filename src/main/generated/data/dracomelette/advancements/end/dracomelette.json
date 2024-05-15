@@ -1,13 +1,11 @@
 {
   "parent": "minecraft:end/dragon_egg",
   "criteria": {
-	"dracomelette": {
+	"has_dracomelette": {
 	  "conditions": {
 		"items": [
 		  {
-			"items": [
-			  "dracomelette:dracomelette"
-			]
+			"items": "dracomelette:dracomelette"
 		  }
 		]
 	  },
@@ -15,23 +13,21 @@
 	}
   },
   "display": {
-	"announce_to_chat": true,
 	"description": {
 	  "translate": "advancements.dracomelette.end.dracomelette.description"
 	},
-	"frame": "task",
-	"hidden": false,
 	"icon": {
-	  "item": "dracomelette:dracomelette"
+	  "count": 1,
+	  "id": "dracomelette:dracomelette"
 	},
-	"show_toast": true,
 	"title": {
 	  "translate": "advancements.dracomelette.end.dracomelette.title"
 	}
   },
   "requirements": [
 	[
-	  "dracomelette"
+	  "has_dracomelette"
 	]
-  ]
+  ],
+  "sends_telemetry_event": true
 }

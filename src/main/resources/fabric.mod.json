@@ -9,7 +9,7 @@
 	"cybercat5555"
   ],
   "contact": {
-	"homepage": "https://www.curseforge.com/minecraft/mc-mods/dracomelette",
+	"homepage": "https://modrinth.com/mod/dracomelette",
 	"sources": "https://github.com/MoriyaShiine/dracomelette",
 	"issues": "https://github.com/MoriyaShiine/dracomelette/issues"
   },
@@ -17,6 +17,9 @@
   "icon": "assets/dracomelette/icon.png",
   "environment": "*",
   "entrypoints": {
+	"fabric-datagen": [
+	  "moriyashiine.dracomelette.data.ModDataGenerator"
+	],
 	"main": [
 	  "moriyashiine.dracomelette.common.Dracomelette"
 	]
@@ -26,8 +29,8 @@
   ],
   "depends": {
 	"fabricloader": "*",
-	"minecraft": "~1.20.1",
-	"java": ">=17",
-	"fabric-api": ">=0.83.1"
+	"minecraft": "~1.20.6",
+	"java": ">=21",
+	"fabric-api": "*"
   }
 }
