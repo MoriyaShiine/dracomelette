@@ -5,6 +5,5 @@
   "subtitles.dracomelette.block.dragon_egg.cook": "Cuisiniers d'oeufs de dragon",
   "dracomelette.midnightconfig.title": "Dracomelette",
   "dracomelette.midnightconfig.spawnMultipleEggs": "Faire apparaître plusieurs oeufs",
-  "dracomelette.midnightconfig.breakChance": "Chance de casser",
-  "dracomelette.midnightconfig.teleportChance": "Chance de téléportation"
+  "dracomelette.midnightconfig.breakChance": "Chance de casser"
 }

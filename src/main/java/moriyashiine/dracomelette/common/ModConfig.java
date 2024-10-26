@@ -11,6 +11,4 @@ public class ModConfig extends MidnightConfig {
 
 	@Entry(min = 0, max = 1, isSlider = true)
 	public static float breakChance = 0.2F;
-	@Entry(min = 0, max = 1, isSlider = true)
-	public static float teleportChance = 0.5F;
 }
