@@ -11,7 +11,6 @@ import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.advancement.AdvancementFrame;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
-import net.minecraft.registry.BuiltinRegistries;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -20,8 +19,8 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Consumer;
 
 public class ModAdvancementProvider extends FabricAdvancementProvider {
-	public ModAdvancementProvider(FabricDataOutput output) {
-		super(output, CompletableFuture.supplyAsync(BuiltinRegistries::createWrapperLookup));
+	public ModAdvancementProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+		super(output, registryLookup);
 	}
 
 	@Override
